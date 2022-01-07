@@ -1,19 +1,19 @@
 [
   {
     "id": 1,
-    "name_product": "Paket Check Up Basic",
+    "name_product": "Paket Medical Check-up Basic",
     "image": "image.png",
     "price": 500000
   },
   {
     "id": 2,
-    "name_product": "Paket Check Up Silver",
+    "name_product": "Paket Medical Check-up Silver",
     "image": "image.png",
     "price": 600000
   },
   {
     "id": 3,
-    "name_product": "Paket Check Up Gold",
+    "name_product": "Paket Medical Check-up Gold",
     "image": "image.png",
     "price": 720000
   },

@@ -10,6 +10,7 @@ function index() {
       <SelectMedic />
       <AboutTriasse />
       <ListProducts />
+      <br />
     </Layouts>
   );
 }
