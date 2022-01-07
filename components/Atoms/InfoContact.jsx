@@ -2,7 +2,7 @@ import React from "react";
 
 function InfoContact() {
   return (
-    <div className="bg-gray-100 w-full flex justify-between py-2 px-28">
+    <div className="bg-gray-100  w-full hidden lg:flex justify-between py-2 px-28">
       <div></div>
       <div className="flex gap-4 items-center">
         <div>

@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "address": "Jl Bintaro no 23 Jakarta Pusat",
+    "service": ["DATANG KE LAB", "HOME SERVICE"],
+    "rating": 4.1,
+    "imglocation": "img-hospital-example.jpg",
+    "info": [
+      {
+        "id": 1,
+        "title": "Tidak bisa reschedule"
+      },
+      {
+        "id": 2,
+        "title": "Tidak bisa refund"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "address": "Jl Lebak Bulus raya Jakarta Selatan",
+    "service": ["DATANG KE LAB", "HOME SERVICE"],
+    "imglocation": "img-hospital-example.jpg",
+    "rating": 4.5,
+    "info": [
+      {
+        "id": 1,
+        "title": "Tidak bisa reschedule"
+      },
+      {
+        "id": 2,
+        "title": "Tidak bisa refund"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "address": "Jl Lebak Bulus raya Jakarta Selatan",
+    "service": ["DATANG KE LAB", "HOME SERVICE"],
+    "imglocation": "img-hospital-example.jpg",
+    "rating": 4.5,
+    "info": [
+      {
+        "id": 1,
+        "title": "Tidak bisa reschedule"
+      },
+      {
+        "id": 2,
+        "title": "Tidak bisa refund"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "address": "Jl Jakarta Surabaya",
+    "service": ["DATANG KE LAB", "HOME SERVICE"],
+    "imglocation": "img-hospital-example.jpg",
+    "rating": 4.5,
+    "info": [
+      {
+        "id": 1,
+        "title": "bisa reschedule"
+      },
+      {
+        "id": 2,
+        "title": "Tidak bisa refund"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "address": "Jl Kepanjen Malang",
+    "service": ["DATANG KE LAB", "HOME SERVICE"],
+    "imglocation": "img-hospital-example.jpg",
+    "rating": 4.5,
+    "info": [
+      {
+        "id": 1,
+        "title": "Tidak bisa reschedule"
+      },
+      {
+        "id": 2,
+        "title": "Tidak bisa refund"
+      }
+    ]
+  }
+]
