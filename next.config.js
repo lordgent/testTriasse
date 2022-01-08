@@ -14,6 +14,10 @@ module.exports = {
         source: "/collection",
         destination: "/CollectionUser",
       },
+      {
+        source: "/location",
+        destination: "/LabLocation/Index",
+      },
     ];
   },
 };

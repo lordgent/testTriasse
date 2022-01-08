@@ -2,9 +2,9 @@ import React from "react";
 
 function InfoMedical() {
   return (
-    <div className="w-full mt-2 gap-8 flex lg:px-24 mb-10">
-      <div className="bg-gray-50 w-full h-52 rounded-lg">
-        <div className="w-full bg-blue-500 h-28 rounded-lg"></div>
+    <div className="w-full mt-2 gap-8 block lg:flex px-8 lg:px-24 mb-10">
+      <div className="bg-gray-50 w-full h-full lg:h-52 mx-auto rounded-lg">
+        <div className="w-full bg-blue-500 h-36 lg:mt-0 mt-2 lg:h-28 rounded-lg"></div>
         <div className="px-2 mt-2">
           <p className="text-sm font-semibold text-gray-800">
             Rapidtest covid 19 Sekarang bisa di cicil 4x
@@ -17,8 +17,8 @@ function InfoMedical() {
           </p>
         </div>
       </div>
-      <div className="bg-gray-50 w-full h-52 rounded-lg">
-        <div className="w-full bg-gray-500 h-28 rounded-lg"></div>
+      <div className="bg-gray-50 w-full h-full lg:h-52 mx-auto rounded-lg">
+        <div className="w-full bg-gray-500 h-36 lg:mt-0 mt-2 lg:h-28 rounded-lg"></div>
         <div className="px-2 mt-2">
           <p className="text-sm font-semibold text-gray-800">
             Apa itu meningtis? Semua yang anda wajib tahu
@@ -31,8 +31,8 @@ function InfoMedical() {
           </p>
         </div>
       </div>
-      <div className="bg-gray-50 w-full h-52 rounded-lg">
-        <div className="w-full bg-red-500 h-28 rounded-lg"></div>
+      <div className="bg-gray-50 w-full h-full lg:h-52 mx-auto rounded-lg">
+        <div className="w-full bg-red-500 h-36 lg:mt-0 mt-2 lg:h-28 rounded-lg"></div>
         <div className="px-2 mt-2">
           <p className="text-sm font-semibold text-gray-800">
             Telat haid: penyebab,gejala dan cara mengatasinya
@@ -45,8 +45,8 @@ function InfoMedical() {
           </p>
         </div>
       </div>
-      <div className="bg-gray-50 w-full h-52 rounded-lg">
-        <div className="w-full bg-blue-400 h-28 rounded-lg"></div>
+      <div className="bg-gray-50 w-full h-full lg:h-52 mx-auto rounded-lg">
+        <div className="w-full bg-blue-400  h-36 lg:mt-0 mt-2 lg:h-28 rounded-lg"></div>
         <div className="px-2 mt-2">
           <p className="text-sm font-semibold text-gray-800">
             Ingin sukses? ketahui 6 tips malam pertanma ini

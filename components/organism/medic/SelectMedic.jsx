@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Link from "next/link";
 import {
   getAllAddress,
   getAllCity,
@@ -106,14 +107,19 @@ function SelectMedic() {
             </div>
           </div>
 
-          <div className="block lg:flex justify-between ">
-            <div>
+          <div className="block lg:flex ">
+            <div className="lg:w-full">
               <ListCart />
             </div>
-            <div className="">
-              <button className="px-8 py-1 rounded-sm bg-orange-500 text-white">
-                Cari lab
-              </button>
+            <div className="lg:w-3/5 flex justify-between px-20">
+              <div></div>
+              <div>
+                <Link href="/location">
+                  <a className="px-8 mx-auto py-1 rounded-sm bg-orange-500 text-white">
+                    Cari lab
+                  </a>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

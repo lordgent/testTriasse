@@ -35,7 +35,7 @@ function MitraorPartner() {
       </p>
       <div className="grid grid-cols-5 items-center gap-4">
         {mitra.map((item) => (
-          <div key={item.id}>
+          <div key={item.id} className="mx-auto">
             <Image src={item.mitralogo} alt="mitratriasse" />
           </div>
         ))}
