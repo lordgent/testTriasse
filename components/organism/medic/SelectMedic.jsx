@@ -14,6 +14,7 @@ import {
   banner,
 } from "../../../assets/index";
 import ModalProduct from "../../molecul/ModalProduct";
+import ListCart from "../../Atoms/ListCart";
 
 function SelectMedic() {
   const Dispatch = useDispatch();
@@ -104,8 +105,11 @@ function SelectMedic() {
               <ModalProduct Show={paketModal} />
             </div>
           </div>
-          <div className="flex justify-between px-20">
-            <div></div>
+
+          <div className="block lg:flex justify-between ">
+            <div>
+              <ListCart />
+            </div>
             <div className="">
               <button className="px-8 py-1 rounded-sm bg-orange-500 text-white">
                 Cari lab

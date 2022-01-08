@@ -2,19 +2,21 @@ import React, { useEffect } from "react";
 import { getAllPaket } from "../../store/actions/PaketActions";
 import { useDispatch, useSelector } from "react-redux";
 import Image from "next/image";
-import { AddToCart } from "../../store/actions/CartActions";
+import { AddToCart, getAllCart } from "../../store/actions/CartActions";
 
 function ModalProduct(props) {
   const dispatch = useDispatch();
 
   const { PaketResult } = useSelector((state) => state.PaketReducer);
+  const {} = useSelector((state) => state.CartReducer);
 
   useEffect(() => {
     dispatch(getAllPaket());
-  }, []);
+  }, [dispatch]);
 
   const handleAddCart = (data) => {
     dispatch(AddToCart(data));
+    dispatch(getAllCart());
   };
 
   return (

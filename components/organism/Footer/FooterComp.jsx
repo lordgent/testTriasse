@@ -3,7 +3,7 @@ import ContactSendMail from "../../Atoms/ContactSendMail";
 
 function FooterComp() {
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <ContactSendMail />
     </div>
   );

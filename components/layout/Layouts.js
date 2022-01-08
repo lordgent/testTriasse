@@ -11,6 +11,8 @@ function Layouts({ children }) {
       <div className="">
         <div>{children}</div>
       </div>
+      <br />
+      <br />
       <FooterComp />
     </>
   );

@@ -20,7 +20,6 @@ const Address = (state = initialState, action) => {
         AddressError: action.payload.data,
       };
     case GET_CITY:
-      console.log(action.type);
       return {
         ...state,
         AddressCityResult: action.payload.data,

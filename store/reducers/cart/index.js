@@ -1,4 +1,4 @@
-import { ADD_CART, GET_CART } from "../../actions/CartActions";
+import { ADD_CART, GET_CART, DELETE_CARTBYID } from "../../actions/CartActions";
 
 const initialState = {
   AddcartResult: false,
@@ -8,6 +8,10 @@ const initialState = {
   GetcartResult: false,
   GetcartLoading: false,
   GetcartError: false,
+
+  DeletecartByIdResult: false,
+  DeletecartByIdLoading: false,
+  DeletecartByIdError: false,
 };
 
 const CartReducer = (state = initialState, action) => {
@@ -26,7 +30,15 @@ const CartReducer = (state = initialState, action) => {
         GetcartLoading: action.payload.data,
         GetcartError: action.payload.data,
       };
-
+    case DELETE_CARTBYID:
+      console.log("masuk delete cart by id");
+      console.log(action);
+      return {
+        ...state,
+        DeletecartByIdResult: action.payload.data,
+        DeletecartByIdLoading: action.payload.data,
+        DeletecartByIdError: action.payload.data,
+      };
     default:
       return state;
   }

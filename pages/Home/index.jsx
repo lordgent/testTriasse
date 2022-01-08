@@ -1,4 +1,5 @@
 import React from "react";
+import InfoMedical from "../../components/Atoms/InfoMedical";
 import Layouts from "../../components/layout/Layouts";
 import AboutTriasse from "../../components/organism/about/AboutTriasse";
 import MitraorPartner from "../../components/organism/medic/MitraorPartner";
@@ -12,7 +13,7 @@ function index() {
       <AboutTriasse />
       <ListProducts />
       <MitraorPartner />
-      <br />
+      <InfoMedical />
     </Layouts>
   );
 }
