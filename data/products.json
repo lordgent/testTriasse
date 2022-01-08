@@ -2,37 +2,37 @@
   {
     "id": 1,
     "name_product": "Paket Medical Check-up Basic",
-    "image": "image.png",
+    "image": "img-example-2.png",
     "price": 500000
   },
   {
     "id": 2,
     "name_product": "Paket Medical Check-up Silver",
-    "image": "image.png",
+    "image": "prod4.png",
     "price": 600000
   },
   {
     "id": 3,
     "name_product": "Paket Medical Check-up Gold",
-    "image": "image.png",
+    "image": "prod2.png",
     "price": 720000
   },
   {
     "id": 4,
     "name_product": "Paket Skrining Diabetes Melitus",
-    "image": "image.png",
+    "image": "img-example-2.png",
     "price": 810000
   },
   {
     "id": 5,
     "name_product": "Paket Resiko Penyakit Jantung",
-    "image": "image.png",
+    "image": "img-example-2.png",
     "price": 12000000
   },
   {
     "id": 6,
     "name_product": "Paket TORCH",
-    "image": "image.png",
+    "image": "prod4.png",
     "price": 500000
   }
 ]

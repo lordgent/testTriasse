@@ -1,4 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  getAllAddress,
+  getAllCity,
+} from "../../../store/actions/AddressAction";
+import { getAllPaket } from "../../../store/actions/PaketActions";
 import Image from "next/image";
 import {
   doctor,
@@ -7,15 +13,32 @@ import {
   selecticon3,
   banner,
 } from "../../../assets/index";
+import ModalProduct from "../../molecul/ModalProduct";
 
 function SelectMedic() {
+  const Dispatch = useDispatch();
+  const [paketModal, setpaketModal] = useState(false);
+  const { AddressResult, AddressCityResult } = useSelector(
+    (state) => state.AddressReducer
+  );
+  const { PaketResult } = useSelector((state) => state.PaketReducer);
+
+  const handleChange = (e) => {
+    Dispatch(getAllCity(e.target.value));
+  };
+
+  useEffect(() => {
+    Dispatch(getAllAddress());
+    Dispatch(getAllPaket());
+  }, [Dispatch]);
+
   return (
     <>
       <div className="image-banner"></div>
-      <div className="px-4 lg:px-20 ">
+      <div className="px-4 lg:px-20">
         <div className=" -mt-10 rounded-lg py-4 rounded-lg shadow-lg">
-          <div className=" px-4  lg:px-20 bg-blue-50 rounded-lg z-40 items-center lg:flex block justify-between">
-            <div className=" items-center">
+          <div className=" px-4  lg:px-20 bg-blue-50 rounded-lg items-center lg:flex block justify-between">
+            <div className=" items-center ">
               <p className="text-gray-600 font-semibold text-md lg:text-2xl">
                 Pilih Jenis Pemerikasaan
               </p>
@@ -32,8 +55,20 @@ function SelectMedic() {
               <p className="text-xs mb-2 text-gray-500">Provinsi</p>
               <div className="flex border gap-2 px-2">
                 <Image src={selecticon1} alt="imageicon" />
-                <select className="bg-white text-gray-500 text-xs border border-0 w-full py-2">
+                <select
+                  onChange={handleChange}
+                  className="bg-white text-gray-500 text-xs border border-0 w-full py-2"
+                >
                   <option>Pilih provinsi</option>
+                  {!AddressResult?.length
+                    ? ""
+                    : AddressResult?.map((item, idx) => {
+                        return (
+                          <option key={idx} value={item?.Provinsi}>
+                            {item.Provinsi}
+                          </option>
+                        );
+                      })}
                 </select>
               </div>
             </div>
@@ -45,6 +80,11 @@ function SelectMedic() {
                   <option className="bg-white text-gray-500 text-xs border-gray-300 py-2">
                     Pilih kota/kabupaten
                   </option>
+                  {!AddressCityResult
+                    ? ""
+                    : AddressCityResult?.map((item) => (
+                        <option key={item.id}>{item.name}</option>
+                      ))}
                 </select>
               </div>
             </div>
@@ -52,12 +92,16 @@ function SelectMedic() {
               <p className="text-xs  mb-2 text-gray-500">
                 Paket & jenis pemeriksaan
               </p>
-              <div className="flex border gap-2 px-2">
+              <div
+                className="flex border gap-2 px-2"
+                onClick={() => setpaketModal(!paketModal)}
+              >
                 <Image src={selecticon3} alt="imageicon" />
-                <select className="bg-white text-gray-500 text-xs border border-0 w-full py-2">
-                  <option>Pilih paket atau jenis pemeriksaan</option>
-                </select>
+                <p className="text-gray-600 py-2 text-xs">
+                  Pilih paket atau jenis pemeriksaan
+                </p>
               </div>
+              <ModalProduct Show={paketModal} />
             </div>
           </div>
           <div className="flex justify-between px-20">

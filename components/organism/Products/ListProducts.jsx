@@ -32,7 +32,7 @@ function ListProducts() {
                   {rp.convert(item?.price)}
                 </p>
                 <p className="text-xs text-blue-600 font-semibold">
-                  {rp.convert(item.price / 2)}
+                  {rp.convert((item.price / 0.2) * 100)}
                 </p>
               </div>
             </div>
