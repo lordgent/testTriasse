@@ -14,7 +14,7 @@ function ListProducts() {
         here are many variations of passages of Lorem Ipsum available, but the
         majority have suffered alteration in some
       </p>
-      <div className=" block lg:flex w-full gap-2 lg:gap-6 mt-4 px-2">
+      <div className="overflow-x-scroll flex w-full gap-4 lg:gap-6 mt-4 px-2">
         {products?.map((item) => (
           <div
             key={item.id}
@@ -33,7 +33,7 @@ function ListProducts() {
                   {rp.convert(item?.price)}
                 </p>
                 <p className="text-xs text-center lg:text-left  text-blue-600 font-semibold">
-                  {rp.convert((item.price / 0.2) * 100)}
+                  {rp.convert(item.price / 2)}
                 </p>
               </div>
             </div>
