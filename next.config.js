@@ -8,12 +8,13 @@ module.exports = {
       },
       {
         source: "/register",
-        destination: "/auth/Register",
+        destination: "/Auth/Register",
       },
       {
-        source: "/collection",
-        destination: "/CollectionUser",
+        source: "/login",
+        destination: "/Auth/Login",
       },
+
       {
         source: "/infopaket",
         destination: "/Home/DetailPaket",
