@@ -3,13 +3,24 @@ import Layouts from "../../components/layout/Layouts";
 import show from "../../assets/img/img-eye-on.svg";
 import hidden from "../../assets/img/img-eye.svg";
 import Image from "next/image";
+import Link from "next/link";
+import google from "../../assets/img/img-google@2x.png";
+import facebook from "../../assets/img/img-facebook@2x.png";
 function Register() {
   const [pass, setpass] = useState(false);
 
   return (
     <Layouts>
       <div className="py-8 px-8 lg:px-28">
-        <div className="border-2 p-4 w-full lg:w-3/5 mx-auto bg-white shadow-lg rounded-lg">
+        <div className="border-2 p-4 w-full lg:w-2/4 mx-auto bg-white shadow-lg rounded-lg">
+          <div className="flex justify-between items-center mb-8">
+            <p className="font-semibold">Daftar</p>
+            <Link href="/login">
+              <a className="text-xs">
+                Sudah punya Akun? <span className="text-blue-500">Masuk</span>
+              </a>
+            </Link>
+          </div>
           <div className="mb-2 border-2  rounded-md ">
             <input
               type="text"
@@ -50,7 +61,7 @@ function Register() {
               />
             </button>
           </div>
-          <div className="mb-2 flex item-center border-2 px-2 rounded-md ">
+          <div className="mb-2 flex item-center border-2 px-2 mb-4 rounded-md ">
             <input
               type={pass ? "text" : "password"}
               placeholder="Konfirmasi password"
@@ -66,9 +77,34 @@ function Register() {
               />
             </button>
           </div>
-          <button className="bg-blue-500 rounded-md text-white w-full py-2 ">
+          <button className="bg-orange-500 mb-4 rounded-md text-white w-full py-2 ">
             Daftar
           </button>
+
+          <p className="text-center text-gray-400 mb-4 text-xs">
+            Atau daftar dengan
+          </p>
+          <div className="flex mb-4 ">
+            <div className="text-blue-500 mx-auto text-xs items-center flex gap-2 shadow-lg px-4 lg:px-12 bg-blue-600 py-1">
+              <Image src={facebook} alt="facebook" height="25" width="25" />
+              <p className="text-white font-semibold">Facebook</p>
+            </div>
+            <div className="text-blue-500 mx-auto text-xs items-center flex gap-2 shadow-lg bg-white px-4 lg:px-12 py-1">
+              <Image src={google} alt="facebook" height="25" width="25" />
+              <p className="text-zinc-700 font-semibold">Google</p>
+            </div>
+          </div>
+          <div className="px-8">
+            <p className="text-center text-gray-500 text-xs">
+              Dengan mendaftar{" "}
+              <span className="text-blue-500">
+                {" "}
+                Saya setuju dengan Syarat dan Ketentuan dan Kebijakan dari
+                Triasse
+              </span>{" "}
+              & <span className="text-blue-500">Kebijakan Privasi</span>
+            </p>
+          </div>
         </div>
       </div>
     </Layouts>

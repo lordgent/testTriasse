@@ -48,7 +48,7 @@ function Login() {
           </div>
 
           <button className="bg-orange-500 rounded-md text-white mb-4 w-full py-2 ">
-            Daftar
+            Masuk
           </button>
           <div className="flex mb-4 justify-between">
             <p className="text-blue-500 text-xs">Lupa Password?</p>
