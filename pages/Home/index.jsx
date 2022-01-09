@@ -1,5 +1,6 @@
 import React from "react";
 import InfoMedical from "../../components/Atoms/InfoMedical";
+import MediaCoverage from "../../components/Atoms/MediaCoverage";
 import Layouts from "../../components/layout/Layouts";
 import AboutTriasse from "../../components/organism/about/AboutTriasse";
 import MitraorPartner from "../../components/organism/medic/MitraorPartner";
@@ -14,6 +15,7 @@ function index() {
       <ListProducts />
       <MitraorPartner />
       <InfoMedical />
+      <MediaCoverage />
     </Layouts>
   );
 }

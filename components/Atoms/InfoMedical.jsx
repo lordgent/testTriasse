@@ -2,7 +2,7 @@ import React from "react";
 
 function InfoMedical() {
   return (
-    <div className="w-full mt-2 gap-8 block lg:flex px-8 lg:px-24 mb-10">
+    <div className="w-full mt-2 gap-8 block lg:flex px-8 lg:px-24 mb-20">
       <div className="bg-gray-50 w-full h-full lg:h-52 mx-auto rounded-lg">
         <div className="w-full bg-purple-600 h-36 lg:mt-0 mt-2 lg:h-28 rounded-lg"></div>
         <div className="px-2 mt-2">

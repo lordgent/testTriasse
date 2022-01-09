@@ -18,7 +18,18 @@ import lked from "../assets/img/img-icon-linkedin.svg";
 import pinter from "../assets/img/img-icon-linkedin.svg";
 import tweet from "../assets/img/img-icon-twitter.svg";
 import yt from "../assets/img/img-icon-youtube.svg";
-
+import mediacoverage1 from "../assets/img/img-media-coverage-1.png";
+import mediacoverage2 from "../assets/img/img-media-coverage-2.png";
+import mediacoverage3 from "../assets/img/img-media-coverage-3.png";
+import mediacoverage4 from "../assets/img/img-media-coverage-4.png";
+import mediacoverage5 from "../assets/img/img-media-coverage-5.png";
+import mediacoverage6 from "../assets/img/img-media-coverage-6.png";
+import mediacoverage7 from "../assets/img/img-media-coverage-7.png";
+import mediacoverage8 from "../assets/img/img-media-coverage-8.png";
+import mediacoverage9 from "../assets/img/img-media-coverage-9.png";
+import mediacoverage10 from "../assets/img/img-media-coverage-10.png";
+import mediacoverage11 from "../assets/img/img-media-coverage-11.png";
+import mediacoverage12 from "../assets/img/img-media-coverage-12.png";
 export {
   logo,
   banner,
@@ -40,4 +51,16 @@ export {
   ig,
   pinter,
   yt,
+  mediacoverage1,
+  mediacoverage2,
+  mediacoverage3,
+  mediacoverage4,
+  mediacoverage5,
+  mediacoverage6,
+  mediacoverage7,
+  mediacoverage8,
+  mediacoverage9,
+  mediacoverage10,
+  mediacoverage11,
+  mediacoverage12,
 };
