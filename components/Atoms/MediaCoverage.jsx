@@ -35,7 +35,7 @@ function MediaCoverage() {
       <p className="lg:text-2xl font-semibold text-center text-zinc-700 mb-8 text-lg">
         Media Coverage
       </p>
-      <div className="grid gap-2 items-center grid-cols-3 lg:grid-cols-5">
+      <div className="grid gap-2 items-center grid-cols-3 lg:grid-cols-9">
         {mediacoverage?.map((itm, idx) => (
           <div key={idx} className="mb-2 mx-auto">
             <Image src={itm} alt="imagemediacoverage" />

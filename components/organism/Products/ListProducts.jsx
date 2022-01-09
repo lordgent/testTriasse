@@ -2,8 +2,16 @@ import React, { useState } from "react";
 import products from "../../../data/products.json";
 import Image from "next/image";
 import EventPromo from "../../Atoms/EventPromo";
+import { useRouter } from "next/router";
+
 function ListProducts() {
   const rp = require("rupiah-format");
+
+  const router = useRouter();
+
+  const handleredirect = () => {
+    router.push("/infopaket");
+  };
 
   return (
     <div className="w-full px-2 lg:px-20 mb-10 mt-10">
@@ -14,9 +22,10 @@ function ListProducts() {
         here are many variations of passages of Lorem Ipsum available, but the
         majority have suffered alteration in some
       </p>
-      <div className="overflow-x-scroll flex w-full gap-4 lg:gap-6 mt-4 px-2">
+      <div className="loverflow-x-scroll flex w-full gap-4 lg:gap-6 mt-4 px-2">
         {products?.map((item) => (
           <div
+            onClick={handleredirect}
             key={item.id}
             className="mx-auto mb-4 lg:mb-0 w-42 bg-gray-50 w-full rounded-lg shadow-lg"
           >

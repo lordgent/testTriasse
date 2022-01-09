@@ -1,7 +1,7 @@
 import React from "react";
 import Layouts from "../../components/layout/Layouts";
 
-function DetailpPaket() {
+function DetailPaket() {
   return (
     <Layouts>
       <p>hello</p>
@@ -9,4 +9,4 @@ function DetailpPaket() {
   );
 }
 
-export default DetailpPaket;
+export default DetailPaket;
