@@ -11,8 +11,8 @@ function Login() {
   const [pass, setpass] = useState(false);
   return (
     <Layouts>
-      <div className="py-8 px-8 lg:px-28">
-        <div className="border-2 p-4 w-full lg:w-2/4 mx-auto bg-white shadow-lg rounded-lg">
+      <div className="py-8 px-8 lg:px-28 bg-gray-100">
+        <div className="border p-4 w-full lg:w-2/4 mx-auto bg-white shadow-lg rounded-lg">
           <div className="flex justify-between items-center mb-8">
             <p className="font-semibold">Masuk</p>
             <Link href="/register">
@@ -21,7 +21,7 @@ function Login() {
               </a>
             </Link>
           </div>
-          <div className="mb-2 border-2  rounded-md ">
+          <div className="mb-2 border  rounded-md ">
             <input
               type="email"
               placeholder="Email"
