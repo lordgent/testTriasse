@@ -23,15 +23,17 @@ function ListProducts() {
           >
             <div className="w-40  mx-auto h-36 bg-gray-300 rounded-lg"></div>
             <div className=" px-4 lg:px-2 py-2">
-              <p className="font-semibold text-sm text-gray-800">
+              <p className="font-semibold text-center lg:text-left text-sm text-gray-800">
                 {item?.name_product}
               </p>
               <div className="">
-                <p className="text-xs text-gray-400">Harga mulai dari</p>
-                <p className="text-xs line-through text-gray-700 mb-2">
+                <p className="text-xs text-center lg:text-left  text-gray-400">
+                  Harga mulai dari
+                </p>
+                <p className="text-xs text-center lg:text-left  line-through text-gray-700 mb-2">
                   {rp.convert(item?.price)}
                 </p>
-                <p className="text-xs text-blue-600 font-semibold">
+                <p className="text-xs text-center lg:text-left  text-blue-600 font-semibold">
                   {rp.convert((item.price / 0.2) * 100)}
                 </p>
               </div>
