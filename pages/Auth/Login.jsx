@@ -6,9 +6,26 @@ import Image from "next/image";
 import Link from "next/link";
 import google from "../../assets/img/img-google@2x.png";
 import facebook from "../../assets/img/img-facebook@2x.png";
-
+import { useDispatch, useSelector } from "react-redux";
+import { cekAuth } from "../../store/actions/AuthActions";
 function Login() {
+  const dispatch = useDispatch();
   const [pass, setpass] = useState(false);
+  const [form, setform] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    setform({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleLogin = (e) => {
+    e.preventDefault();
+    dispatch(cekAuth(form));
+  };
   return (
     <Layouts>
       <div className="py-8 px-8 lg:px-28 bg-gray-100">
@@ -27,6 +44,7 @@ function Login() {
               placeholder="Email"
               name="email"
               className="w-full h-10  px-2"
+              onChange={handleChange}
             />
           </div>
 
@@ -36,6 +54,7 @@ function Login() {
               placeholder="Password"
               name="password"
               className="w-full h-10 "
+              onChange={handleChange}
             />
             <button onClick={() => setpass(!pass)}>
               <Image
@@ -47,7 +66,10 @@ function Login() {
             </button>
           </div>
 
-          <button className="bg-orange-500 rounded-md text-white mb-4 w-full py-2 ">
+          <button
+            onClick={handleLogin}
+            className="bg-orange-500 rounded-md text-white mb-4 w-full py-2 "
+          >
             Masuk
           </button>
           <div className="flex mb-4 justify-between">

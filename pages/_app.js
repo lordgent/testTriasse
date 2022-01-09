@@ -14,6 +14,8 @@ function MyApp({ Component, pageProps }) {
     localStorage.setItem("Diagnosa", JSON.stringify(diagnosa));
   }, []);
 
+  useEffect(() => {}, []);
+
   return (
     <Provider store={store}>
       <Component {...pageProps} />
