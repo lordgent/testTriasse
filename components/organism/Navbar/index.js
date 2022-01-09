@@ -62,14 +62,14 @@ function Index() {
           </Link>
         </div>
         <div className="py-2 ">
-          <Link href="/">
+          <Link href="/login">
             <a className="text-blue-500 w-full rounded-sm  bg-blue-100 py-2 px-4 text-sm">
               Masuk
             </a>
           </Link>
         </div>
         <div className="py-2">
-          <Link href="/">
+          <Link href="/register">
             <a className="text-white bg-blue-500  rounded-sm py-2 px-4 text-sm">
               Daftar
             </a>
