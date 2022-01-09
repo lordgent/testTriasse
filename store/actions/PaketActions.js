@@ -1,4 +1,5 @@
 export const GET_PAKETLAB = "GET_PAKETLAB";
+export const GET_DIAGNOSA = "GET_DIAGNOSA ";
 
 export const getAllPaket = () => {
   return (dispatch) => {
@@ -26,6 +27,42 @@ export const getAllPaket = () => {
     } catch (error) {
       dispatch({
         type: GET_PAKETLAB,
+        payload: {
+          loading: false,
+          data: null,
+          error: error,
+        },
+      });
+    }
+  };
+};
+
+export const getAllDiagnosa = () => {
+  return (dispatch) => {
+    dispatch({
+      type: GET_DIAGNOSA,
+      payload: {
+        loading: true,
+        data: null,
+        error: false,
+      },
+    });
+
+    try {
+      if (localStorage.getItem("Diagnosa")) {
+        const response = JSON.parse(localStorage.getItem("Diagnosa"));
+        dispatch({
+          type: GET_DIAGNOSA,
+          payload: {
+            loading: true,
+            data: response,
+            error: false,
+          },
+        });
+      }
+    } catch (error) {
+      dispatch({
+        type: GET_DIAGNOSA,
         payload: {
           loading: false,
           data: null,

@@ -27,7 +27,7 @@ function ListCart() {
           key={item?.id}
           className="flex gap-2 lg:mt-0 mt-2 items-center bg-green-200 py-2 px-2"
         >
-          <p className="text-xs text-green-700"> {item?.name_product}</p>
+          <p className="text-xs text-green-700"> {item?.name}</p>
           <svg
             onClick={() => handleDelete(item?.id)}
             xmlns="http://www.w3.org/2000/svg "

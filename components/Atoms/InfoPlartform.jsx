@@ -4,8 +4,8 @@ import Image from "next/image";
 function InfoPlartform() {
   const icon = [fb, lked, tweet, ig, pinter, yt];
   return (
-    <div className="py-2" style={{ backgroundColor: "#192a56" }}>
-      <div className="grid grid-cols-1 lg:grid-cols-5 py-8 gap-4 px-4">
+    <div className="py-2 " style={{ backgroundColor: "#192a56" }}>
+      <div className="grid px-10 lg:px-28 grid-cols-1 lg:grid-cols-5 py-8 gap-4 px-4">
         <div className="mx-auto">
           <div className="mb-4 mx-auto lg:mx-0 ">
             <Image
@@ -17,7 +17,7 @@ function InfoPlartform() {
           <p className="text-white text-center lg:text-left  text-xs">
             Plartform pertama untuk tes laboratorium dan pemeriksaan kesehatan
             di indonesia yang memberikan pelanggan kemapuan untuk memberi
-            keputusan yang lebih baik bagi kesehatan mereka kesehatan
+            keputusan yang lebih baik bagi kesehatan mereka
           </p>
         </div>
         <div className="mx-auto">
@@ -82,7 +82,7 @@ function InfoPlartform() {
           <div className="mb-6">
             <p className="text-white font-semibold">Media Sosial</p>
           </div>
-          <div className="grid mx-auto grid-cols-3 gap-4">
+          <div className="grid mx-auto grid-cols-3 ">
             {icon?.map((item, idx) => (
               <div key={idx} className="mx-auto">
                 <Image src={item} alt="icon" className="h-4 w-4" />

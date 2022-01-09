@@ -5,7 +5,10 @@ import {
   getAllAddress,
   getAllCity,
 } from "../../../store/actions/AddressAction";
-import { getAllPaket } from "../../../store/actions/PaketActions";
+import {
+  getAllPaket,
+  getAllDiagnosa,
+} from "../../../store/actions/PaketActions";
 import Image from "next/image";
 import {
   doctor,
@@ -25,13 +28,13 @@ function SelectMedic() {
     (state) => state.AddressReducer
   );
   const { PaketResult } = useSelector((state) => state.PaketReducer);
-
   const handleChange = (e) => {
     Dispatch(getAllCity(e.target.value));
   };
 
   useEffect(() => {
     Dispatch(getAllAddress());
+
     Dispatch(getAllPaket());
   }, [Dispatch]);
 

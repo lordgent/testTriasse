@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Glukosa puasa"
+  },
+  {
+    "id": 2,
+    "name": "Kolesterol Total"
+  },
+  {
+    "id": 3,
+    "name": "Insulin"
+  },
+  {
+    "id": 4,
+    "name": "Pap Smear"
+  },
+  {
+    "id": 5,
+    "name": "Kolesterol HDL"
+  }
+]
