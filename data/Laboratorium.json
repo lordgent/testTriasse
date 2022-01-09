@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "name_lab": "Bio Medika Gandaria",
     "address": "Jl Bintaro no 23 Jakarta Pusat",
     "service": ["DATANG KE LAB", "HOME SERVICE"],
     "rating": 4.1,
@@ -18,6 +19,7 @@
   },
   {
     "id": 2,
+    "name_lab": "Laboratorium Klinik Medilab",
     "address": "Jl Lebak Bulus raya Jakarta Selatan",
     "service": ["DATANG KE LAB", "HOME SERVICE"],
     "imglocation": "img-hospital-example.jpg",
@@ -35,6 +37,7 @@
   },
   {
     "id": 3,
+    "name_lab": "Laboratorium Klinik Kimia Farma",
     "address": "Jl Lebak Bulus raya Jakarta Selatan",
     "service": ["DATANG KE LAB", "HOME SERVICE"],
     "imglocation": "img-hospital-example.jpg",
@@ -52,7 +55,8 @@
   },
   {
     "id": 4,
-    "address": "Jl Jakarta Surabaya",
+    "name_lab": "Lab Parahita Dharmawangsa Surabaya",
+    "address": "Jl Dharmawangsa no 66 Surabaya",
     "service": ["DATANG KE LAB", "HOME SERVICE"],
     "imglocation": "img-hospital-example.jpg",
     "rating": 4.5,
@@ -69,7 +73,8 @@
   },
   {
     "id": 5,
-    "address": "Jl Kepanjen Malang",
+    "name_lab": "Laboratorium Klinik Patimura",
+    "address": "Jl Pattimura No.17 Malang",
     "service": ["DATANG KE LAB", "HOME SERVICE"],
     "imglocation": "img-hospital-example.jpg",
     "rating": 4.5,

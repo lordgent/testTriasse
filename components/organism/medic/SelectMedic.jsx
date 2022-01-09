@@ -20,6 +20,7 @@ import ListCart from "../../Atoms/ListCart";
 function SelectMedic() {
   const Dispatch = useDispatch();
   const [paketModal, setpaketModal] = useState(false);
+  const [search, setSearch] = useState("");
   const { AddressResult, AddressCityResult } = useSelector(
     (state) => state.AddressReducer
   );
@@ -33,6 +34,10 @@ function SelectMedic() {
     Dispatch(getAllAddress());
     Dispatch(getAllPaket());
   }, [Dispatch]);
+
+  const handleCity = (e) => {
+    setSearch(e.target.value);
+  };
 
   return (
     <>
@@ -78,14 +83,19 @@ function SelectMedic() {
               <p className="text-xs  mb-2  text-gray-500">Kota/Kabupaten</p>
               <div className="flex border gap-2 px-2">
                 <Image src={selecticon2} alt="imageicon" />
-                <select className="bg-white text-gray-500 text-xs border border-0 w-full py-2">
+                <select
+                  onChange={handleCity}
+                  className="bg-white text-gray-500 text-xs border border-0 w-full py-2"
+                >
                   <option className="bg-white text-gray-500 text-xs border-gray-300 py-2">
                     Pilih kota/kabupaten
                   </option>
                   {!AddressCityResult
                     ? ""
                     : AddressCityResult?.map((item) => (
-                        <option key={item.id}>{item.name}</option>
+                        <option key={item.id} value={item.name}>
+                          {item.name}
+                        </option>
                       ))}
                 </select>
               </div>
@@ -114,8 +124,8 @@ function SelectMedic() {
             <div className="lg:w-3/5 flex justify-between px-20">
               <div></div>
               <div>
-                <Link href="/location">
-                  <a className="px-8 mx-auto py-1 rounded-sm bg-orange-500 text-white">
+                <Link href={`/LabLocation?address=${search}`}>
+                  <a className="px-8 mx-auto py-2 rounded-sm bg-orange-500 text-white">
                     Cari lab
                   </a>
                 </Link>
