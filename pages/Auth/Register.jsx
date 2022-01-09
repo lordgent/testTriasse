@@ -11,7 +11,7 @@ function Register() {
 
   return (
     <Layouts>
-      <div className="py-8 px-8 lg:px-28">
+      <div className="py-8 bg-gray-100 px-4 lg:px-28">
         <div className="border-2 p-4 w-full lg:w-2/4 mx-auto bg-white shadow-lg rounded-lg">
           <div className="flex justify-between items-center mb-8">
             <p className="font-semibold">Daftar</p>
@@ -105,6 +105,16 @@ function Register() {
               & <span className="text-blue-500">Kebijakan Privasi</span>
             </p>
           </div>
+        </div>
+        <div className=" block lg:flex items-center mt-4 mx-auto">
+          <div className="mx-auto lg:w-auto w-2/4 flex items-center gap-2">
+            <input type="checkbox" className="" />
+            <p className="text-xs text-gray-500 text-center mx-auto items-center gap-2">
+              Saya ingin mendapatkan penawaran eksklusif dan promosi dari
+              Triasse
+            </p>
+          </div>
+          <div></div>
         </div>
       </div>
     </Layouts>
