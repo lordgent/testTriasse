@@ -4,7 +4,6 @@ import Image from "next/image";
 import EventPromo from "../../Atoms/EventPromo";
 function ListProducts() {
   const rp = require("rupiah-format");
-  const [Diskon, setDiskon] = useState(0);
 
   return (
     <div className="w-full px-2 lg:px-20 mb-10 mt-10">
@@ -19,7 +18,7 @@ function ListProducts() {
         {products?.map((item) => (
           <div
             key={item.id}
-            className="mx-auto w-42 bg-gray-50 w-full rounded-lg shadow-lg"
+            className="mx-auto mb-4 lg:mb-0 w-42 bg-gray-50 w-full rounded-lg shadow-lg"
           >
             <div className="w-40  mx-auto h-36 bg-gray-300 rounded-lg"></div>
             <div className=" px-4 lg:px-2 py-2">

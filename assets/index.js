@@ -11,6 +11,14 @@ import mitra5 from "../assets/img/img-mitra-5.png";
 import selecticon1 from "../assets/img/img-icon-pin.svg";
 import selecticon2 from "../assets/img/img-icon-pin-map.svg";
 import selecticon3 from "../assets/img/img-icon-stetoscop.svg";
+import logosmall from "../assets/img/img-brand-logo-white.png";
+import fb from "../assets/img/img-icon-facebook.svg";
+import ig from "../assets/img/img-icon-instagram.svg";
+import lked from "../assets/img/img-icon-linkedin.svg";
+import pinter from "../assets/img/img-icon-linkedin.svg";
+import tweet from "../assets/img/img-icon-twitter.svg";
+import yt from "../assets/img/img-icon-youtube.svg";
+
 export {
   logo,
   banner,
@@ -25,4 +33,11 @@ export {
   selecticon1,
   selecticon2,
   selecticon3,
+  logosmall,
+  fb,
+  lked,
+  tweet,
+  ig,
+  pinter,
+  yt,
 };
