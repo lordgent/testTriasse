@@ -48,8 +48,6 @@ function InfoMedical() {
           </div>
         </div>
       ))}
-
-      {/* ==== */}
     </div>
   );
 }

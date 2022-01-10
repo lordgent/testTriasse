@@ -1,5 +1,6 @@
 import React from "react";
-
+import { onlinemedic } from "../../assets/index";
+import Image from "next/image";
 function AboutInfo() {
   const infoProducts = [
     {
@@ -31,7 +32,13 @@ function AboutInfo() {
     <div className="w-full mt-4 px-2 py-8">
       <div className=" block lg:flex lg:mx-auto mx-0  gap-8 w-full">
         <div className=" w-full lg:w-3/5 mx-auto lg:mx-0 mb-4">
-          <div className="bg-gray-200 w-full lg:h-full h-52 mx-auto lg:mx-0 rounded-lg"></div>
+          <div className="w-full lg:h-full h-full mx-auto lg:mx-0 rounded-lg">
+            <Image
+              src={onlinemedic}
+              alt="onlinemedical"
+              className="rounded-lg"
+            />
+          </div>
         </div>
 
         {/* ====== */}
@@ -39,9 +46,9 @@ function AboutInfo() {
           {infoProducts.map((item) => (
             <div
               key={item.id}
-              className=" block lg:flex lg:mx-auto mx-0  gap-8 mb-4"
+              className=" block lg:flex lg:mx-auto mx-0 gap-2 mb-4"
             >
-              <div className="bg-gray-200 w-28 h-20 mx-auto lg:mx-0 rounded-md"></div>
+              <div className="bg-gray-200 w-20 h-16 mb-1 mx-auto lg:mx-0 rounded-md"></div>
               <div className="w-full">
                 <p className="text-zinc-700 lg:text-left text-center text-md font-semibold">
                   {item?.title}

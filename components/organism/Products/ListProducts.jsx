@@ -3,7 +3,7 @@ import products from "../../../data/products.json";
 import Image from "next/image";
 import EventPromo from "../../Atoms/EventPromo";
 import { useRouter } from "next/router";
-
+import { consul } from "../../../assets/index";
 function ListProducts() {
   const rp = require("rupiah-format");
 
@@ -29,7 +29,9 @@ function ListProducts() {
             key={item.id}
             className="mx-auto mb-4 lg:mb-0 w-42 bg-gray-50 w-full rounded-lg shadow-lg"
           >
-            <div className="w-40  mx-auto h-36 bg-gray-300 rounded-lg"></div>
+            <div className="w-40  mx-auto h-36 rounded-lg">
+              <Image src={consul} alt="consultasion" className="rounded-md" />
+            </div>
             <div className=" px-4 lg:px-2 py-2">
               <p className="font-semibold text-center lg:text-left text-sm text-gray-800">
                 {item?.name_product}
