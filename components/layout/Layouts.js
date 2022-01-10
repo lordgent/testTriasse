@@ -7,7 +7,6 @@ import { cekAuthLogin } from "../../store/actions/AuthActions";
 import { useDispatch } from "react-redux";
 function Layouts({ children }) {
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(cekAuthLogin());
   }, [dispatch]);

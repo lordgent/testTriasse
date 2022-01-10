@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { logo } from "../../../assets/index";
 import { useDispatch, useSelector } from "react-redux";
+
 function Index() {
   const dispatch = useDispatch();
   const { UserLoginResult } = useSelector((state) => state.AuthReducer);
@@ -69,7 +70,7 @@ function Index() {
 
         {UserLoginResult ? (
           <div className="py-2 ">
-            <Link href="/login">
+            <Link href="/">
               <a className="text-gray-500 w-full rounded-sm  bg-gray-100 py-2 px-4 text-sm">
                 {UserLoginResult?.fullname}
               </a>

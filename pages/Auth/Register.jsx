@@ -6,8 +6,34 @@ import Image from "next/image";
 import Link from "next/link";
 import google from "../../assets/img/img-google@2x.png";
 import facebook from "../../assets/img/img-facebook@2x.png";
+import { useDispatch, useSelector } from "react-redux";
+import { RegisterApp } from "../../store/actions/AuthActions";
+
 function Register() {
+  const dispatch = useDispatch();
+  const [form, setform] = useState({
+    fullname: "",
+    email: "",
+    nophone: "",
+    password: "",
+  });
   const [pass, setpass] = useState(false);
+  const handleChange = (e) => {
+    setform({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let data = {
+      fullname: form.fullname,
+      email: form.email,
+      nophone: form.nophone,
+      password: form.password,
+    };
+    dispatch(RegisterApp(data));
+  };
 
   return (
     <Layouts>
@@ -27,6 +53,7 @@ function Register() {
               placeholder="Nama Lengkap"
               name="fullname"
               className="w-full h-10 px-2"
+              onChange={handleChange}
             />
           </div>
           <div className="mb-2 border-2  rounded-md ">
@@ -35,6 +62,7 @@ function Register() {
               placeholder="Email"
               name="email"
               className="w-full h-10  px-2"
+              onChange={handleChange}
             />
           </div>
           <div className="mb-2 border-2  rounded-md ">
@@ -43,6 +71,7 @@ function Register() {
               placeholder="No Handphone"
               name="nophone"
               className="w-full h-10  px-2"
+              onChange={handleChange}
             />
           </div>
           <div className="mb-2 border-2 flex items-center px-2 rounded-md ">
@@ -51,6 +80,7 @@ function Register() {
               placeholder="Password"
               name="password"
               className="w-full h-10 "
+              onChange={handleChange}
             />
             <button onClick={() => setpass(!pass)}>
               <Image
@@ -67,6 +97,7 @@ function Register() {
               placeholder="Konfirmasi password"
               name="passwordconfirm"
               className="w-full h-10"
+              onChange={handleChange}
             />
             <button onClick={() => setpass(!pass)}>
               <Image
@@ -77,7 +108,10 @@ function Register() {
               />
             </button>
           </div>
-          <button className="bg-orange-500 mb-4 rounded-md text-white w-full py-2 ">
+          <button
+            onClick={handleSubmit}
+            className="bg-orange-500 mb-4 rounded-md text-white w-full py-2 "
+          >
             Daftar
           </button>
 
@@ -96,12 +130,11 @@ function Register() {
           </div>
           <div className="px-8">
             <p className="text-center text-gray-500 text-xs">
-              Dengan mendaftar{" "}
+              Dengan mendaftar
               <span className="text-blue-500">
-                {" "}
                 Saya setuju dengan Syarat dan Ketentuan dan Kebijakan dari
                 Triasse
-              </span>{" "}
+              </span>
               & <span className="text-blue-500">Kebijakan Privasi</span>
             </p>
           </div>

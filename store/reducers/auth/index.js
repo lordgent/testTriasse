@@ -1,4 +1,4 @@
-import { AUTH, CEK_AUTH } from "../../actions/AuthActions";
+import { AUTH, CEK_AUTH, REGISTER } from "../../actions/AuthActions";
 
 const initialState = {
   AuthResult: false,
@@ -8,6 +8,10 @@ const initialState = {
   UserLoginResult: false,
   UserLoginLoading: false,
   UserLoginError: false,
+
+  UserRegisterResult: false,
+  UserRegisterLoading: false,
+  UserRegisterError: false,
 };
 
 const AuthReducer = (state = initialState, action) => {
@@ -25,6 +29,13 @@ const AuthReducer = (state = initialState, action) => {
         UserLoginResult: action.payload.data,
         UserLoginLoading: action.payload.data,
         UserLoginError: action.payload.data,
+      };
+    case REGISTER:
+      return {
+        ...state,
+        UserRegisterResult: action.payload.data,
+        UserRegisterLoading: action.payload.data,
+        UserRegisterError: action.payload.data,
       };
     default:
       return state;

@@ -7,7 +7,7 @@ import Link from "next/link";
 import google from "../../assets/img/img-google@2x.png";
 import facebook from "../../assets/img/img-facebook@2x.png";
 import { useDispatch, useSelector } from "react-redux";
-import { cekAuth } from "../../store/actions/AuthActions";
+import { cekAuth, cekAuthLogin } from "../../store/actions/AuthActions";
 function Login() {
   const dispatch = useDispatch();
   const [pass, setpass] = useState(false);
@@ -22,9 +22,9 @@ function Login() {
       [e.target.name]: e.target.value,
     });
   };
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const handleLogin = () => {
     dispatch(cekAuth(form));
+    dispatch(cekAuthLogin());
   };
   return (
     <Layouts>
