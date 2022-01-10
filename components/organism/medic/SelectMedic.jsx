@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
+import Router from "next/router";
+import swall from "sweetalert";
 import {
   getAllAddress,
   getAllCity,
@@ -41,7 +43,13 @@ function SelectMedic() {
   const handleCity = (e) => {
     setSearch(e.target.value);
   };
-
+  const handleSearch = () => {
+    if (!search || search === "") {
+      return swall("pilih Jenis paket dulu");
+    } else {
+      Router.push(`/LabLocation?address=${search}`);
+    }
+  };
   return (
     <>
       <div className="image-banner"></div>
@@ -127,11 +135,12 @@ function SelectMedic() {
             <div className="lg:w-3/5 flex justify-between px-20">
               <div></div>
               <div>
-                <Link href={`/LabLocation?address=${search}`}>
-                  <a className="px-8 mx-auto py-2 rounded-sm bg-orange-500 text-white">
-                    Cari lab
-                  </a>
-                </Link>
+                <button
+                  onClick={handleSearch}
+                  className="px-8 mx-auto py-2 rounded-sm bg-orange-500 text-white"
+                >
+                  Cari lab
+                </button>
               </div>
             </div>
           </div>

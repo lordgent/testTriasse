@@ -4,15 +4,21 @@ import Image from "next/image";
 import { logo } from "../../../assets/index";
 import { useDispatch, useSelector } from "react-redux";
 import Cookies from "js-cookie";
+import Router from "next/router";
+
 function Index() {
   const dispatch = useDispatch();
   const { UserLoginResult } = useSelector((state) => state.AuthReducer);
   const [toogle, setToogle] = useState(false);
   const token = Cookies.get("token");
+  const handlePush = () => {
+    Router.push("/");
+  };
+
   return (
     <div className="bg-white px-4 lg:px-28 z-100 w-full py-2 items-center justify-between block lg:flex">
       <div className=" flex justify-between items-center">
-        <div className="items-center">
+        <div onClick={handlePush} className="items-center">
           <Image src={logo} alt="logotriassee" className="lg:h-full h-8" />
         </div>
         <div>

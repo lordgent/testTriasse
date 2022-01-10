@@ -58,7 +58,7 @@ function Login() {
             />
             <button onClick={() => setpass(!pass)}>
               <Image
-                src={pass ? hidden : show}
+                src={pass ? show : hidden}
                 alt="showpassword"
                 width="25"
                 height="25"
