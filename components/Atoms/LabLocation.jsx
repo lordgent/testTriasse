@@ -47,7 +47,7 @@ function LabLocation() {
                     </p>
                   ))}
                 </div>
-                <div className="mt-4">
+                <div className="mt-6">
                   <p className=" text-xs lg:text-sm text-zinc-700 font-semibold">
                     {item?.name_lab}
                   </p>
@@ -56,7 +56,7 @@ function LabLocation() {
                   </p>
                 </div>
 
-                <div className="flex gap-2 items-center mt-2 lg:mt-4">
+                <div className="flex gap-2 items-center mt-6">
                   <div className="">
                     <div className=" gap-1 flex items-center">
                       <div className="h-4 w-4">
