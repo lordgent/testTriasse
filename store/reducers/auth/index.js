@@ -24,6 +24,7 @@ const AuthReducer = (state = initialState, action) => {
         AuthError: action.payload.data,
       };
     case CEK_AUTH:
+      console.log(action);
       return {
         ...state,
         UserLoginResult: action.payload.data,

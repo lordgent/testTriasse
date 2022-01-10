@@ -15,7 +15,7 @@ if (token) {
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     const token = Cookies.get("token");
-    console.log(token + " THIS TOKEN");
+
     if (token) {
       AuthToken(token);
     }

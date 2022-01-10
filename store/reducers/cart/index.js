@@ -32,7 +32,7 @@ const CartReducer = (state = initialState, action) => {
       };
     case DELETE_CARTBYID:
       console.log("masuk delete cart by id");
-      console.log(action);
+
       return {
         ...state,
         DeletecartByIdResult: action.payload.data,
