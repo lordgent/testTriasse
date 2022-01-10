@@ -80,7 +80,9 @@ function InfoPlartform() {
 
         <div>
           <div className="mb-6">
-            <p className="text-white font-semibold">Media Sosial</p>
+            <p className="text-white lg:text-left text-center font-semibold">
+              Media Sosial
+            </p>
           </div>
           <div className="grid mx-auto grid-cols-3 ">
             {icon?.map((item, idx) => (
