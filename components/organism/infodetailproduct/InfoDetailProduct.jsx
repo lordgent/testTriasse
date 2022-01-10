@@ -3,11 +3,11 @@ import Image from "next/image";
 import imgartikel from "../../../assets/img/img-article-1.jpg";
 function InfoDetailProduct() {
   return (
-    <div className="w-9/12 bg-white shadow-lg">
+    <div className="w-full lg:w-9/12 lg:mx-0 mx-auto bg-white shadow-lg">
       <div className="w-full">
         <Image src={imgartikel} alt="imagearticle" sizes="100%" />
       </div>
-      <div className="px-10 py-10">
+      <div className="px-2 lg:px-10 py-10">
         <p className=" text-md text-zinc-700 font-semibold lg:text-2xl">
           Paket Skrining Diabetes Melitus{" "}
         </p>

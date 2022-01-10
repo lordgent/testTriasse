@@ -5,6 +5,7 @@ import { getSearchLab } from "../../store/actions/LabActions";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { location, star } from "../../assets/index";
+import Router from "next/router";
 function LabLocation() {
   const router = useRouter();
   const { SearchLocationResult } = useSelector((state) => state.SearchReducer);
@@ -14,6 +15,9 @@ function LabLocation() {
     dispatch(getSearchLab(router.query.address));
   }, [dispatch]);
   console.log(SearchLocationResult);
+  const handlePush = () => {
+    Router.push("/infopaket");
+  };
   return (
     <div className="">
       {!SearchLocationResult || !SearchLocationResult.length
@@ -21,6 +25,7 @@ function LabLocation() {
         : SearchLocationResult?.map((item) => (
             <div
               key={item.id}
+              onClick={handlePush}
               className="flex h-44 lg:h-36 w-full  rounded-lg shadow-lg mb-4 bg-white w-full"
             >
               <div className="w-2/12	h-full">

@@ -5,7 +5,7 @@ import star from "../../assets/img/img-star-yellow.svg";
 import maps from "../../assets/img/img-icon-pin-blue.svg";
 function DetailLabProduct() {
   return (
-    <div className="w-3/12 h-1/2 py-8 rounded-lg px-4 shadow-lg bg-white">
+    <div className="w-full lg:mt-0 mt-2 mx-auto  lg:w-3/12 h-1/2 py-8 rounded-lg px-4 shadow-lg bg-white">
       <p className="text-zinc-600 font-semibold text-md">
         Paket Skrining Diabetes Meletus
       </p>

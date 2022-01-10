@@ -6,7 +6,7 @@ import InfoDetailProduct from "../../components/organism/infodetailproduct/InfoD
 function DetailPaket() {
   return (
     <Layouts>
-      <div className="block py-8 bg-gray-100 lg:flex gap-8 px-6 lg:px-28">
+      <div className="block py-8 bg-gray-100 lg:flex gap-8  px-2 lg:px-28">
         <InfoDetailProduct />
         <DetailLabProduct />
       </div>
