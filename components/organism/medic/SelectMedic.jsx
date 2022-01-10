@@ -75,7 +75,7 @@ function SelectMedic() {
                     : AddressResult?.map((item, idx) => {
                         return (
                           <option key={idx} value={item?.Provinsi}>
-                            {item.Provinsi}
+                            {item?.Provinsi}
                           </option>
                         );
                       })}
@@ -96,7 +96,7 @@ function SelectMedic() {
                   {!AddressCityResult
                     ? ""
                     : AddressCityResult?.map((item) => (
-                        <option key={item.id} value={item.name}>
+                        <option key={item?.id} value={item?.name}>
                           {item.name}
                         </option>
                       ))}

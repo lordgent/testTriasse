@@ -21,7 +21,6 @@ function ModalProduct(props) {
     dispatch(AddToCart(data));
     dispatch(getAllCart());
   };
-  console.log(DiagnosaResult);
 
   return (
     props.Show && (
