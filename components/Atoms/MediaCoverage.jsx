@@ -31,7 +31,7 @@ function MediaCoverage() {
   ];
 
   return (
-    <div className=" lg:px-28">
+    <div className=" mt-20 lg:mt-44 lg:px-28">
       <p className="lg:text-2xl font-semibold text-center text-zinc-700 mb-8 text-lg">
         Media Coverage
       </p>

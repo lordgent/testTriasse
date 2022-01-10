@@ -25,6 +25,7 @@ export const getServerSideProps = async function ({ req, res }) {
 };
 
 function Login() {
+  const { AuthLoading } = useSelector((state) => state.AuthReducer);
   const dispatch = useDispatch();
   const [pass, setpass] = useState(false);
   const [form, setform] = useState({
@@ -42,7 +43,9 @@ function Login() {
     dispatch(cekAuth(form));
     dispatch(cekAuthLogin());
   };
-  return (
+  return AuthLoading ? (
+    <p>loading</p>
+  ) : (
     <Layouts>
       <div className="py-8 px-8 lg:px-28 bg-gray-100">
         <div className="border p-4 w-full lg:w-2/4 mx-auto bg-white shadow-lg rounded-lg">

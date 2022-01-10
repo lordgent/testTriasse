@@ -15,6 +15,7 @@ const initialState = {
 };
 
 const AuthReducer = (state = initialState, action) => {
+  console.log(action);
   switch (action.type) {
     case AUTH:
       return {
@@ -24,7 +25,6 @@ const AuthReducer = (state = initialState, action) => {
         AuthError: action.payload.data,
       };
     case CEK_AUTH:
-      console.log(action);
       return {
         ...state,
         UserLoginResult: action.payload.data,

@@ -25,11 +25,11 @@ function MitraorPartner() {
     },
   ];
   return (
-    <div className="py-10 px-20 bg-blue-50">
-      <p className="text-2xl text-center mb-10 text-gray-600 font-semibold">
+    <div className="py-10 px-8 lg:px-20 bg-blue-50">
+      <p className="text-2xl text-center mb-10 text-zinc-700 font-semibold">
         Mitra Laboratorium Terbaik di Indonesia
       </p>
-      <p className="text-sm text-gray-500  mb-10 text-center">
+      <p className="text-sm text-zinc-500  mb-10 text-center">
         Triasse Tersedia 44 cabang seluruh Indonesia,dengan sebaran di 16 kota
         yang bisa di pesan secara online.
       </p>

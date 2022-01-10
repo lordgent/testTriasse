@@ -28,7 +28,7 @@ export const cekAuth = (form) => {
         dispatch({
           type: AUTH,
           payload: {
-            loading: false,
+            loading: true,
             data: response.data.user,
             errorMessage: false,
           },
