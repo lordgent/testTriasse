@@ -155,3 +155,17 @@ function Register() {
 }
 
 export default Register;
+export const getServerSideProps = async function ({ req, res }) {
+  if (req.cookies.token) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+
+  return {
+    props: {},
+  };
+};

@@ -8,6 +8,22 @@ import google from "../../assets/img/img-google@2x.png";
 import facebook from "../../assets/img/img-facebook@2x.png";
 import { useDispatch, useSelector } from "react-redux";
 import { cekAuth, cekAuthLogin } from "../../store/actions/AuthActions";
+
+export const getServerSideProps = async function ({ req, res }) {
+  if (req.cookies.token) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+
+  return {
+    props: {},
+  };
+};
+
 function Login() {
   const dispatch = useDispatch();
   const [pass, setpass] = useState(false);
