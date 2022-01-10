@@ -22,7 +22,7 @@ function ListProducts() {
         here are many variations of passages of Lorem Ipsum available, but the
         majority have suffered alteration in some
       </p>
-      <div className="loverflow-x-scroll block lg:flex w-full gap-4 lg:gap-6 mt-4 px-2">
+      <div className="overflow-x-scroll lg:overflow-x-hidden flex w-full gap-4 lg:gap-6 mt-4 px-2">
         {products?.map((item) => (
           <div
             onClick={handleredirect}
