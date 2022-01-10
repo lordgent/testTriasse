@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
     if (localStorage.token) {
       AuthToken(localStorage.token);
     } else {
-      console.log("not ");
+      return false;
     }
   }, []);
   const store = createStore(reducers, compose(applyMiddleware(thunk)));
