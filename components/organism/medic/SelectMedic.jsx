@@ -45,7 +45,7 @@ function SelectMedic() {
   };
   const handleSearch = () => {
     if (!search || search === "") {
-      return swall("pilih Jenis paket dulu");
+      return swall("pilih Jenis paket/diagnosa & Lokasimu dulu");
     } else {
       Router.push(`/LabLocation?address=${search}`);
     }

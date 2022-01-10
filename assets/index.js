@@ -32,7 +32,8 @@ import mediacoverage11 from "../assets/img/img-media-coverage-11.png";
 import mediacoverage12 from "../assets/img/img-media-coverage-12.png";
 import onlinemedic from "../assets/img/online.jpg";
 import consul from "../assets/img/consultasion.jpg";
-
+import location from "../assets/img/img-search-post-1.png";
+import star from "../assets/img/img-start-on.svg";
 export {
   logo,
   banner,
@@ -68,4 +69,6 @@ export {
   mediacoverage12,
   onlinemedic,
   consul,
+  star,
+  location,
 };

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getSearchLab } from "../../store/actions/LabActions";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import { location, star } from "../../assets/index";
 function LabLocation() {
   const router = useRouter();
   const { SearchLocationResult } = useSelector((state) => state.SearchReducer);
@@ -19,26 +20,29 @@ function LabLocation() {
         ? ""
         : SearchLocationResult?.map((item) => (
             <div key={item.id} className="flex mb-4 bg-white w-full">
-              <div className="w-1/4  bg-gray-200"></div>
+              <div className="w-1/4 h-fit">
+                <Image src={location} alt="lablocation" className="h-full" />
+              </div>
               <div className="w-full px-2 flex justify-between py-2">
                 <div className="">
-                  <div className="flex mb-6 gap-2">
+                  <div className="flex mb-4 gap-2">
                     {item?.service?.map((itm) => (
-                      <p
+                      <span
                         className={`${
                           itm.length % 2 ? "bg-blue-500 " : "bg-green-500 "
-                        } text-xs text-white px-1 lg:px-2 lg:font-semibold rounded-lg`}
+                        } text-xs text-white px-2 lg:font-semibold rounded-lg`}
                         key={itm}
                       >
                         {itm}
-                      </p>
+                      </span>
                     ))}
                   </div>
-                  <p className=" text-xs lg:text-md text-zinc-700">
-                    {item?.name_lab}
-                  </p>
-                  <p className="text-gray-500 text-xs">{item?.address}</p>
-                  <div className="flex gap-4 mt-6 items-center">
+                  <div>
+                    <p className=" text-xs lg:text-md text-zinc-700">
+                      {item?.name_lab}
+                    </p>
+                    <p className="text-gray-500 text-xs">{item?.address}</p>
+                    <div className="flex gap-4 mt-2 lg:mt-4 items-center"></div>
                     <div>
                       <p className="flex text-xs text-zinc-600 font-semibold items-center">
                         <svg
@@ -68,7 +72,7 @@ function LabLocation() {
                   </div>
                 </div>
 
-                <div className=" px-2 lg:px-8 py-8">
+                <div className="mx-auto pt-6 px-2 lg:px-8">
                   <p
                     style={{ fontSize: "9px" }}
                     className="text-center bg-red-200 text-red-500 w-3/5"
