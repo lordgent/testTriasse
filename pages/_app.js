@@ -6,15 +6,21 @@ import thunk from "redux-thunk";
 import { lab, address, products, diagnosa } from "../data/index";
 import reducers from "../store/reducers";
 import { AuthToken } from "../pages/api/index";
+import Cookies from "js-cookie";
 
+const token = Cookies.get("token");
+if (token) {
+  AuthToken(token);
+}
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    if (localStorage.token) {
-      AuthToken(localStorage.token);
-    } else {
-      return false;
+    const token = Cookies.get("token");
+    console.log(token + " THIS TOKEN");
+    if (token) {
+      AuthToken(token);
     }
   }, []);
+
   const store = createStore(reducers, compose(applyMiddleware(thunk)));
   useEffect(() => {
     localStorage.setItem("Laboratorium", JSON.stringify(lab));

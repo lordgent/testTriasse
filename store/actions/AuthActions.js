@@ -1,8 +1,8 @@
 export const AUTH = "AUTH";
 export const CEK_AUTH = "CEK_AUTH";
-
+import Cookie from "js-cookie";
 import { API } from "../../pages/api/index";
-
+import Router from "next/router";
 export const cekAuth = (form) => {
   return (dispatch) => {
     dispatch({
@@ -13,37 +13,37 @@ export const cekAuth = (form) => {
         error: false,
       },
     });
+    const config = {
+      headers: {
+        "Content-type": "application/json",
+      },
+    };
 
-    const postAuth = async () => {
-      try {
-        const config = {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        };
-        const body = JSON.stringify(form);
-        const response = await API.post("/signin", body, config);
-        localStorage.setItem("token", response.data.data.token);
+    API.post("/signin", form, config)
+      .then((response) => {
         dispatch({
           type: AUTH,
           payload: {
-            loading: true,
-            data: response.data.data,
-            error: false,
+            loading: false,
+            data: response.data.user,
+            errorMessage: false,
           },
         });
-      } catch (error) {
+        console.log(response.data.data);
+        // swal("Login is Success");
+        Router.push("/");
+        Cookie.set("token", response.data.data.token);
+      })
+      .catch((err) => {
         dispatch({
           type: AUTH,
           payload: {
             loading: false,
             data: false,
-            error: error.message,
+            errorMessage: err,
           },
         });
-      }
-    };
-    postAuth();
+      });
   };
 };
 
