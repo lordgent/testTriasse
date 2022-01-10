@@ -19,73 +19,71 @@ function LabLocation() {
       {!SearchLocationResult || !SearchLocationResult.length
         ? ""
         : SearchLocationResult?.map((item) => (
-            <div key={item.id} className="flex mb-4 bg-white w-full">
-              <div className="w-1/4 h-fit">
-                <Image src={location} alt="lablocation" className="h-full" />
+            <div
+              key={item.id}
+              className="flex h-44 lg:h-36 w-full  rounded-lg shadow-lg mb-4 bg-white w-full"
+            >
+              <div className="w-2/12	h-full">
+                <div className="w-full h-44 lg:h-36 p-4 relative">
+                  <Image
+                    src={location}
+                    alt="imagessize"
+                    sizes="100%"
+                    className="rounded-lg"
+                    layout="fill"
+                  />
+                </div>
               </div>
-              <div className="w-full px-2 flex justify-between py-2">
-                <div className="">
-                  <div className="flex mb-4 gap-2">
-                    {item?.service?.map((itm) => (
-                      <span
-                        className={`${
-                          itm.length % 2 ? "bg-blue-500 " : "bg-green-500 "
-                        } text-xs text-white px-2 lg:font-semibold rounded-lg`}
-                        key={itm}
-                      >
-                        {itm}
-                      </span>
-                    ))}
-                  </div>
-                  <div>
-                    <p className=" text-xs lg:text-md text-zinc-700">
-                      {item?.name_lab}
+              <div className="w-7/12 px-2 py-2 h-full">
+                <div className="flex gap-2 items-center">
+                  {item.service.map((itm, i) => (
+                    <p
+                      className={`text-xs  px-2 text-white rounded-lg  ${
+                        i % 2 == 0 ? "bg-blue-500" : "bg-green-500"
+                      }`}
+                      key={i}
+                    >
+                      {itm}
                     </p>
-                    <p className="text-gray-500 text-xs">{item?.address}</p>
-                    <div className="flex gap-4 mt-2 lg:mt-4 items-center"></div>
-                    <div>
-                      <p className="flex text-xs text-zinc-600 font-semibold items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-4 w-4 text-yellow-500"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
-                          />
-                        </svg>
-                        4.8
-                      </p>
-                    </div>
-                    <div className="flex gap-2">
-                      {item?.info.map((inf, idx) => (
-                        <p className="text-xs text-zinc-600" key={idx}>
-                          {inf.title}
-                        </p>
-                      ))}
-                    </div>
-                  </div>
+                  ))}
+                </div>
+                <div className="mt-4">
+                  <p className=" text-xs lg:text-sm text-zinc-700 font-semibold">
+                    {item?.name_lab}
+                  </p>
+                  <p className="text-xs  lg:text-sm text-zinc-500">
+                    {item?.address}
+                  </p>
                 </div>
 
-                <div className="mx-auto pt-6 px-2 lg:px-8">
-                  <p
-                    style={{ fontSize: "9px" }}
-                    className="text-center bg-red-200 text-red-500 w-3/5"
-                  >
-                    Hemat 20%
-                  </p>
-                  <p className="line-through text-xs lg:text-sm text-gray-500">
-                    Rp.500.000
-                  </p>
-                  <p className=" text-xs lg:text-2xl font-semibold text-orange-500">
-                    Rp 300.000
-                  </p>
+                <div className="flex gap-2 items-center mt-2 lg:mt-4">
+                  <div className="">
+                    <div className=" gap-1 flex items-center">
+                      <div className="h-4 w-4">
+                        <Image src={star} sizes="100%" alt="imagestar" />
+                      </div>
+                      <p className="text-xs text-zinc-700">rating 4.7</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-2 items-center">
+                    {item?.info?.map((inpo) => (
+                      <p className="text-xs text-gray-400" key={inpo.id}>
+                        {inpo?.title}
+                      </p>
+                    ))}
+                  </div>
                 </div>
+              </div>
+              <div className="w-3/12	h-full 	py-4">
+                <p className="text-red-600 w-6/12   bg-red-100 text-xs text-center mx-auto">
+                  Hemat 20%
+                </p>
+                <p className="line-through py-2 text-gray-400 text-sm text-center mx-auto">
+                  Rp.500.000
+                </p>
+                <p className="text-orange-600 font-semibold text-md lg:text-2xl text-center mx-auto">
+                  Rp.300.000
+                </p>
               </div>
             </div>
           ))}
